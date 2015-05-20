@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'data_mapper'
 require 'rack-flash'
-require_relative 'user'
+require 'user'
 
 
 env = ENV['RACK_ENV'] || 'development'
@@ -20,8 +20,9 @@ DataMapper.auto_upgrade!
 class BookmarkManager < Sinatra::Base
   enable :sessions
   use Rack::Flash
+  use Rack::MethodOverride
   set :session_secret, 'super secret'
-  set :views, proc { File.join(root, '../views') }
+  set :views, proc { File.join(root, '../app/views') }
 
   helpers do
     def current_user
@@ -73,7 +74,26 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
-  def self.authenticate(email,password)
-    user = first.(email: email)
+  get '/sessions/new' do
+    erb :'sessions/new'
   end
+
+  post '/sessions' do
+    email, password = params[:email], params[:password]
+    user = User.authenticate(email, password)
+    if user
+      session[:user_id] = user.id
+      redirect to('/')
+    else
+      flash[:errors] = ['The email or password is incorrect']
+      erb :'sessions/new'
+    end
+  end
+
+  delete '/sessions' do
+    flash[:notice] = 'Goodbye'
+    session[:user_id] = nil
+    redirect '/'
+  end
+
 end

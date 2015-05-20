@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
@@ -19,4 +18,5 @@ group :development, :test do
   gem 'launchy'
   gem 'shotgun'
   gem 'rack-flash3'
+  gem 'rake'
 end
