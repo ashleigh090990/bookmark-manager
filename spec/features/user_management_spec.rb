@@ -10,6 +10,13 @@ feature 'User signs in' do
                 password_confirmation: 'test')
   end
 
+  scenario 'user is directed to sign in page from homepage' do
+    visit '/'
+    expect(page).to have_content('Sign in here')
+    click_link 'Sign in here'
+    expect(page).to have_content('Please sign in')
+  end
+
   scenario 'with correct credentials' do
     visit '/'
     expect(page).not_to have_content('Welcome, test@test.com')
