@@ -1,4 +1,4 @@
-require_relative 'helpers/session.rb'
+require_relative 'helpers/session'
 
 include SessionHelpers
 
@@ -22,6 +22,15 @@ feature 'User signs in' do
     expect(page).not_to have_content('Welcome, test@test.com')
     sign_in('test@test.com', 'wrong')
     expect(page).not_to have_content('Welcome, test@test.com')
+  end
+
+  scenario 'User forgets password' do
+    visit '/sessions/new'
+    expect(page).not_to have_content('Welcome, test@test.com')
+    expect(page).to have_content('Forgotten password?')
+    click_link 'Forgotten password?'
+    expect(page).to have_content('Enter email address')
+    fill_in 'email', with: email
   end
 
 end
