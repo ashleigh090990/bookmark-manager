@@ -10,12 +10,15 @@
   	<% if current_user %>
       <span id="welcome-message">
       Welcome <%= current_user.email %></span>
-    <% end %>
-
   	<form id="sign-out" method="post" action="/sessions">
   	  <input type="hidden" name="_method" value="delete">
   	  <input type="submit" value="Sign out">
   	</form>
+    <% else %>
+      <a href="/users/new" id="sign-up">Sign Up</a>
+      <a href="/sessions/new" id="sign-in">Sign In</a>
+    <% end %>
+
   </div>
 
 </header>

@@ -52,8 +52,7 @@ table {
 */
 
 header {
-	background-color: black;
-	border-color: black;
+	background-color: #59D1B9;
 }
 
 #logo {
@@ -62,7 +61,39 @@ header {
 	font-size: 10em;
 }
 
+#user-links {
+	position: fixed;
+	top: 2em;
+	right: 2em;
+}
 
+#sign-in {
+	background-color: #59D1B9;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+	color: white;
+	font-size: 2em;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-radius: 15%;
+	border-color: white;
+	border-style: solid;
+	border-width: medium;
+}
+
+#sign-up {
+	background-color: #59D1B9;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+	color: white;
+	font-size: 2em;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-radius: 15%;
+	border-color: white;
+	border-style: solid;
+	border-width: medium;
+}
 
 
 
