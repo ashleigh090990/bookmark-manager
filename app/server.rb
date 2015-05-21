@@ -20,6 +20,7 @@ class BookmarkManager < Sinatra::Base
   set :session_secret, 'super secret'
   set :views, Proc.new { File.join(root, '../app/views') }
   set :public_folder, Proc.new { File.join(root, 'public') }
+  set :public_folder, 'public'
 
   helpers do
     def current_user
