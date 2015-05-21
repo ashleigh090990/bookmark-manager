@@ -65,14 +65,13 @@ header {
 }
 
 #user-links {
-	position: fixed;
-	top: 2em;
-	right: 2em;
+	position: relative;
+	float: right;
+	top: -3em;
 }
 
 #sign-in {
 	background-color: #59D1B9;
-	text-decoration: none;
 	color: white;
 	font-size: 2em;
 	padding-right: 10px;
@@ -85,7 +84,6 @@ header {
 
 #sign-up {
 	background-color: #59D1B9;
-	text-decoration: none;
 	color: white;
 	font-size: 2em;
 	padding-right: 10px;
@@ -97,19 +95,59 @@ header {
 }
 
 #added-links {
+	float: right;
 	text-decoration: none;
 	background-color: #59D1B9;
-	font-size: 20px;
+	font-size: 25px;
 	position: relative;
 	top: 10px;
+	right: -130px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	width: 500px;
+	width: 600px;
 }
 
 #new-link {
 	position: relative;
-	top: 20px;
+	top: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+#current-links {
+	float: right;
+	color: #59D1B9;
+	font-size: 25px;
+	position: relative;
+	top: -1em;
+	right: 450px;
+}
+
+#submit-button {
+	font-family: 'Oswald', sans-serif;
+	background-color: white;
+	color: #59D1B9;
+	border-style: solid;
+	border-width: medium;
+	border-color: #59D1B9;
+}
+
+#input-field-names {
+	color: #59D1B9;
+	font-size: 25px;
+}
+
+#input-fields {
+	font-family: 'Oswald', sans-serif;
+	background-color: white;
+	font-size: 20px;
+	color: #59D1B9;
+	border-style: solid;
+	border-width: medium;
+	border-color: #59D1B9;
 }
 
 </style>

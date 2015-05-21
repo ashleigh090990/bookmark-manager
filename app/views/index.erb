@@ -23,21 +23,22 @@
 
 </header>
 
+	<div id='new-link'>
+	  <form action='/links' method='post' id="input-field-names">
+	    Url: <input type='text' name='url' id="input-fields">
+	    Title: <input type='text' name='title' id="input-fields">
+	    Tags: <input type='text' name='tags' id="input-fields">
+	    <input type='submit' value='Add link' id='submit-button'>
+	  </form>
+	</div>
+
+	<span id="current-links">Current links:</span>
 	<div id="added-links">
 	  <ul>
 	    <% @links.each do |link| %>
 	      <li><a href='<%= link.url %>'><%= link.title %></a></li>
 	    <% end %>
 	  </ul>
-	</div>
-
-	<div id='new-link'>
-	  <form action='/links' method='post'>
-	    Url: <input type='text' name='url'>
-	    Title: <input type='text' name='title'>
-	    Tags: <input type='text' name='tags'>
-	    <input type='submit' value='Add link'>
-	  </form>
 	</div>
 
 </body>
