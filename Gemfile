@@ -7,6 +7,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'capybara'
 gem 'rack-flash3'
+gem 'rake'
 
 group :development, :test do
   gem 'rspec'
@@ -19,5 +20,4 @@ group :development, :test do
   gem 'bcrypt'
   gem 'launchy'
   gem 'shotgun'
-  gem 'rake'
 end
