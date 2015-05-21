@@ -4,7 +4,7 @@ require 'data_mapper'
 
 require_relative 'app/server'
 
-require './app/data_mapper_setup'
+# require './app/data_mapper_setup'
 
 # RuboCop::RakeTask.new :cop
 # RSpec::Core::RakeTask.new :spec
