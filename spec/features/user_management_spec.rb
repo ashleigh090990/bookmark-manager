@@ -10,13 +10,6 @@ feature 'User signs in' do
                 password_confirmation: 'test')
   end
 
-  scenario 'user is directed to sign in page from homepage' do
-    visit '/'
-    expect(page).to have_content('Sign in here')
-    click_link 'Sign in here'
-    expect(page).to have_content('Please sign in')
-  end
-
   scenario 'with correct credentials' do
     visit '/'
     expect(page).not_to have_content('Welcome, test@test.com')
@@ -31,15 +24,15 @@ feature 'User signs in' do
     expect(page).not_to have_content('Welcome, test@test.com')
   end
 
-  scenario 'User forgets password' do
-    visit '/sessions/new'
-    expect(page).not_to have_content('Welcome, test@test.com')
-    expect(page).to have_content('Forgotten password?')
-    click_link 'Forgotten password?'
-    expect(page).to have_content('Enter email address')
-    fill_in 'email', with: email
-    click_button 'Submit'
-  end
+  # scenario 'User forgets password' do
+  #   visit '/sessions/new'
+  #   expect(page).not_to have_content('Welcome, test@test.com')
+  #   expect(page).to have_content('Forgotten password?')
+  #   click_link 'Forgotten password?'
+  #   expect(page).to have_content('Enter email address')
+  #   fill_in 'email', with: email
+  #   click_button 'Submit'
+  # end
 
 end
 
