@@ -23,11 +23,13 @@
 
 </header>
 
-	<ul>
-	  <% @links.each do |link| %>
-	    <li><a href='<%= link.url %>'><%= link.title %></a></li>
-	  <% end %>
-	</ul>
+	<div id="added-links">
+	  <ul>
+	    <% @links.each do |link| %>
+	      <li><a href='<%= link.url %>'><%= link.title %></a></li>
+	    <% end %>
+	  </ul>
+	</div>
 
 	<div id='new-link'>
 	  <form action='/links' method='post'>

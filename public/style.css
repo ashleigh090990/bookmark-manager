@@ -51,13 +51,16 @@ table {
 -----------------------------------------------------------------------------------------------------------
 */
 
+body {
+	font-family: 'Oswald', sans-serif;
+}
+
 header {
 	background-color: #59D1B9;
 }
 
 #logo {
 	color: white;
-	font-family: 'Oswald', sans-serif;
 	font-size: 10em;
 }
 
@@ -69,7 +72,6 @@ header {
 
 #sign-in {
 	background-color: #59D1B9;
-	font-family: 'Oswald', sans-serif;
 	text-decoration: none;
 	color: white;
 	font-size: 2em;
@@ -83,7 +85,6 @@ header {
 
 #sign-up {
 	background-color: #59D1B9;
-	font-family: 'Oswald', sans-serif;
 	text-decoration: none;
 	color: white;
 	font-size: 2em;
@@ -95,6 +96,20 @@ header {
 	border-width: medium;
 }
 
+#added-links {
+	text-decoration: none;
+	background-color: #59D1B9;
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 500px;
+}
 
+#new-link {
+	position: relative;
+	top: 20px;
+}
 
 </style>
