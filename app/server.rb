@@ -19,6 +19,7 @@ class BookmarkManager < Sinatra::Base
   use Rack::MethodOverride
   set :session_secret, 'super secret'
   set :views, proc { File.join(root, '../app/views') }
+  set :public_folder, proc { File.join(root, 'public') }
 
   helpers do
     def current_user
